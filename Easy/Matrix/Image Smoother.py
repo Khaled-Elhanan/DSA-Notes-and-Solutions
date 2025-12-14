@@ -11,7 +11,7 @@ for r in range(rows) :
             for j in range(c-1 , c+2):
                 if(i<0 or i ==rows or j<0 or j==cols):
                     continue
-                total+=img[i][j]%256 # %256 to return just the old_value to use it with neighbours 
+                total+=img[i][j]%256  # %256 to take only the old_value to use it with neighbours 
                 cnt+=1
         img[r][c]=img[r][c]^(total//cnt)<<8 # old_value XOR new_value
 for  r in range(rows): # for return only the new value from the number --> number now contain [new_value][old_value] 
